@@ -6,10 +6,10 @@ export default function MixpanelTable() {
 
   return (
     <div className="mixpanel-table-container">
-      <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
+      <table>
         <thead>
           <tr>
-            <th>事件名稱</th>
+            <th>Mixpanel Event Name</th>
             <th>數量</th>
           </tr>
         </thead>

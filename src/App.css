@@ -1,25 +1,48 @@
 .App-container {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #f5f5f5;
   padding: 20px;
+  min-height: 100vh;
 }
 
 table {
+  background-color: white;
+  border-radius: 12px;
+  border-collapse: separate;
+  border-spacing: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   width: 100%;
-  table-layout: fixed;
 }
 
-tr {
-  font-size: 32px;
+th, td {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px 16px;
   text-align: center;
+  font-size: 30px;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
 }
 
 .title {
   text-align: left;
-  font-size: 36px;
+  font-size: 24px;
+}
+
+.cell-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #6c747c;
+}
+
+.cell-content {
+  margin: 0;
 }
 
 .pass {

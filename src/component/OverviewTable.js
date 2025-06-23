@@ -6,34 +6,42 @@ export default function OverviewTable() {
 
   return (
     <div className="overview-table-container">
-      <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
-        <thead>
-          <tr>
-            <th>總測試數</th>
-            <th>通過測試</th>
-            <th>失敗測試</th>
-            <th>執行環境</th>
-            <th>執行時間</th>
-            <th>測試網址</th>
-            <th>瀏覽器</th>
-            <th>網路 IP</th>
-          </tr>
-        </thead>
+      <table>
         <tbody>
           <tr>
-            <td>{overview.totalTests}</td>
-            <td>{overview.passedTests}（{overview.successRate}）</td>
-            <td>{overview.failedTests}</td>
             <td>
-              <div>{overview.environment}</div>
+              <div className="cell-title">總測試數</div>
+              <div className="cell-content">{overview.totalTests}</div>
             </td>
             <td>
-              <div>{overview.executionTime.date}</div>
-              <div>{overview.executionTime.time}</div>
+              <div className="cell-title">通過測試</div>
+              <div className="cell-content">{overview.passedTests}（{overview.successRate}）</div>
             </td>
-            <td>{overview.testUrl}</td>
-            <td>{overview.browser}</td>
-            <td>{overview.networkIP}</td>
+            <td>
+              <div className="cell-title">失敗測試</div>
+              <div className="cell-content">{overview.failedTests}</div>
+            </td>
+            <td>
+              <div className="cell-title">執行環境</div>
+              <div className="cell-content">{overview.environment}</div>
+            </td>
+            <td>
+              <div className="cell-title">執行時間</div>
+              <div className="cell-content">{overview.executionTime.date}</div>
+              <div className="cell-content">{overview.executionTime.time}</div>
+            </td>
+            <td>
+              <div className="cell-title">測試網址</div>
+              <div className="cell-content">{overview.testUrl}</div>
+            </td>
+            <td>
+              <div className="cell-title">瀏覽器</div>
+              <div className="cell-content">{overview.browser}</div>
+            </td>
+            <td>
+              <div className="cell-title">網路 IP</div>
+              <div className="cell-content">{overview.networkIP}</div>
+            </td>
           </tr>
         </tbody>
       </table>

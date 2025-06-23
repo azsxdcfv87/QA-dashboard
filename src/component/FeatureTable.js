@@ -11,7 +11,7 @@ export default function FeatureTable() {
   }
 
   return (
-    <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
+    <table>
       <tbody>
         {chunkedFeatures.map((row, rowIndex) => (
           <tr key={rowIndex}>
@@ -22,7 +22,6 @@ export default function FeatureTable() {
                 <td 
                   key={feature.name} 
                   className={isPass ? 'pass' : 'fail'}
-                  style={{ textAlign: 'center' }}
                 >
                   {feature.name} {passCount}/{feature.total}
                 </td>

@@ -6,23 +6,29 @@ export default function UploadTable() {
 
   return (
     <div className="upload-table-container">
-      <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
-        <thead>
-          <tr>
-            <th>檔案大小</th>
-            <th>上傳時間</th>
-            <th>轉檔時間</th>
-            <th>顯示時間</th>
-            <th>總處理時間</th>
-          </tr>
-        </thead>
+      <table>
         <tbody>
           <tr>
-            <td>{upload.fileSize}</td>
-            <td>{upload.uploadTime}</td>
-            <td>{upload.convertTime}</td>
-            <td>{upload.displayTime}</td>
-            <td>{upload.totalProcessTime}</td>
+            <td>
+              <div className="cell-title">檔案大小</div>
+              <div className="cell-content">{upload.fileSize}</div>
+            </td>
+            <td>
+              <div className="cell-title">上傳時間</div>
+              <div className="cell-content">{upload.uploadTime}</div>
+            </td>
+            <td>
+              <div className="cell-title">轉檔時間</div>
+              <div className="cell-content">{upload.convertTime}</div>
+            </td>
+            <td>
+              <div className="cell-title">顯示時間</div>
+              <div className="cell-content">{upload.displayTime}</div>
+            </td>
+            <td>
+              <div className="cell-title">總處理時間</div>
+              <div className="cell-content">{upload.totalProcessTime}</div>
+            </td>
           </tr>
         </tbody>
       </table>
