@@ -1,6 +1,9 @@
 import React from 'react';
+import data from '../data.json';
 
 export default function FailTable() {
+  const { failedTests } = data;
+
   return (
     <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
       <thead>
@@ -11,16 +14,13 @@ export default function FailTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>[FW-01-003]</td>
-          <td>登入追蹤主播有發文的帳號，確認限時動態元件已顯示</td>
-          <td>失敗</td>
-        </tr>
-        <tr>
-          <td>[CH-02-001]</td>
-          <td>上傳影片貼文(mov)</td>
-          <td>失敗</td>
-        </tr>
+        {failedTests.map((test, index) => (
+          <tr key={index}>
+            <td>{test.id}</td>
+            <td>{test.description}</td>
+            <td>{test.status}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );

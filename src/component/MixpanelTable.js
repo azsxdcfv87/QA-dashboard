@@ -1,6 +1,9 @@
 import React from 'react';
+import data from '../data.json';
 
 export default function MixpanelTable() {
+  const { mixpanel } = data;
+
   return (
     <div className="mixpanel-table-container">
       <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
@@ -11,14 +14,12 @@ export default function MixpanelTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>v2.view.opened</td>
-            <td>13534 個</td>
-          </tr>
-          <tr>
-            <td>v2.user.clicked</td>
-            <td>14120 個</td>
-          </tr>
+          {mixpanel.map((item, index) => (
+            <tr key={index}>
+              <td>{item.event}</td>
+              <td>{item.count} 個</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

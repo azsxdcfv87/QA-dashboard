@@ -1,6 +1,9 @@
 import React from 'react';
+import data from '../data.json';
 
 export default function OverviewTable() {
+  const { overview } = data;
+
   return (
     <div className="overview-table-container">
       <table border="1" cellPadding="8" style={{ width: "100%", tableLayout: "fixed", marginBottom: 16 }}>
@@ -18,19 +21,19 @@ export default function OverviewTable() {
         </thead>
         <tbody>
           <tr>
-            <td>103</td>
-            <td>101（98.1%）</td>
-            <td>2</td>
+            <td>{overview.totalTests}</td>
+            <td>{overview.passedTests}（{overview.successRate}）</td>
+            <td>{overview.failedTests}</td>
             <td>
-              <div>web手機版</div>
+              <div>{overview.environment}</div>
             </td>
             <td>
-              <div>2025-06-17</div>
-              <div>06:03</div>
+              <div>{overview.executionTime.date}</div>
+              <div>{overview.executionTime.time}</div>
             </td>
-            <td>https://swag.live</td>
-            <td>Chrome</td>
-            <td>10.100.6.23</td>
+            <td>{overview.testUrl}</td>
+            <td>{overview.browser}</td>
+            <td>{overview.networkIP}</td>
           </tr>
         </tbody>
       </table>

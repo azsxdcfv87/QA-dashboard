@@ -1,17 +1,8 @@
 import React from 'react';
+import data from '../data.json';
 
 export default function FeatureTable() {
-  const features = [
-    { name: 'Login', total: 15, fail: 1 },
-    { name: 'Chatroom', total: 22, fail: 2 },
-    { name: 'Livestream', total: 18, fail: 0 },
-    { name: 'Shop-1', total: 42, fail: 0 },
-    { name: 'Shop-2', total: 32, fail: 14 },
-    { name: 'Shop-3', total: 81, fail: 23 },
-    { name: 'Shop-4', total: 74, fail: 0 },
-    { name: 'Shop-5', total: 11, fail: 2 },
-    { name: 'Shop-6', total: 45, fail: 5 },
-  ];
+  const { features } = data;
 
   // 將功能分組，每組最多6個
   const chunkedFeatures = [];

@@ -1,0 +1,50 @@
+{
+  "overview": {
+    "totalTests": 144,
+    "passedTests": 131,
+    "failedTests": 13,
+    "successRate": "91.0%",
+    "environment": "web手機版",
+    "executionTime": {
+      "date": "2025-06-17",
+      "time": "06:03"
+    },
+    "testUrl": "https://swag.live",
+    "browser": "Chrome",
+    "networkIP": "10.100.6.23"
+  },
+  "features": [
+    { "name": "Login", "total": 15, "fail": 1 },
+    { "name": "Chatroom", "total": 22, "fail": 2 },
+    { "name": "Livestream", "total": 18, "fail": 0 },
+    { "name": "Shop-1", "total": 42, "fail": 0 },
+    { "name": "Shop-2", "total": 32, "fail": 14 },
+    { "name": "Shop-3", "total": 81, "fail": 23 },
+    { "name": "Shop-4", "total": 74, "fail": 0 },
+    { "name": "Shop-5", "total": 11, "fail": 2 },
+    { "name": "Shop-6", "total": 45, "fail": 5 }
+  ],
+  "upload": {
+    "fileSize": "0.77 MB",
+    "uploadTime": "10 秒",
+    "convertTime": "6.1 秒",
+    "displayTime": "7.5 秒",
+    "totalProcessTime": "13.6 秒"
+  },
+  "mixpanel": [
+    { "event": "v2.view.opened", "count": 13534 },
+    { "event": "v2.user.clicked", "count": 14120 }
+  ],
+  "failedTests": [
+    {
+      "id": "[FW-01-003]",
+      "description": "登入追蹤主播有發文的帳號，確認限時動態元件已顯示",
+      "status": "失敗"
+    },
+    {
+      "id": "[CH-02-001]",
+      "description": "上傳影片貼文(mov)",
+      "status": "失敗"
+    }
+  ]
+} 
