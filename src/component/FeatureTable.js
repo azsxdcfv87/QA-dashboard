@@ -23,7 +23,7 @@ export default function FeatureTable() {
                   key={feature.name} 
                   className={isPass ? 'pass' : 'fail'}
                 >
-                  {feature.name} {passCount}/{feature.total}
+                  {feature.name} &nbsp;&nbsp;&nbsp; {passCount}/{feature.total}
                 </td>
               );
             })}

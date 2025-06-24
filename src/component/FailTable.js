@@ -5,7 +5,7 @@ export default function FailTable() {
   const { failedTests } = data;
 
   return (
-    <table>
+    <table className="fail-table">
       <thead>
         <tr>
           <th>編號</th>

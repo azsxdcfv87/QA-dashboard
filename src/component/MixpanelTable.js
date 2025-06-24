@@ -4,24 +4,36 @@ import data from '../data.json';
 export default function MixpanelTable() {
   const { mixpanel } = data;
 
+  // 將事件分組，每組最多4個
+  const chunkedEvents = [];
+  for (let i = 0; i < mixpanel.length; i += 4) {
+    chunkedEvents.push(mixpanel.slice(i, i + 4));
+  }
+
   return (
-    <div className="mixpanel-table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Mixpanel Event Name</th>
-            <th>數量</th>
+    <table>
+      <tbody>
+        {chunkedEvents.map((row, rowIndex) => (
+          <tr key={rowIndex}>
+            {row.map((item, index) => {
+              const isPass = item.success === item.total;
+              return (
+                <td 
+                  key={index} 
+                  className={isPass ? 'pass' : 'fail'}
+                  style={{ textAlign: 'center' }}
+                >
+                  {item.event} &nbsp;&nbsp;&nbsp; {item.success}/{item.total}
+                </td>
+              );
+            })}
+            {/* 如果這行不滿4個，用空的td填滿 */}
+            {Array.from({ length: 4 - row.length }, (_, index) => (
+              <td key={`empty-${index}`}></td>
+            ))}
           </tr>
-        </thead>
-        <tbody>
-          {mixpanel.map((item, index) => (
-            <tr key={index}>
-              <td>{item.event}</td>
-              <td>{item.count} 個</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
   );
 } 

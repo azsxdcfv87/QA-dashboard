@@ -12,6 +12,7 @@ table {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   width: 100%;
+  table-layout: fixed;
 }
 
 th, td {
@@ -21,12 +22,23 @@ th, td {
   padding: 12px 16px;
   text-align: center;
   font-size: 30px;
+  width: 25%;
 }
 
 th {
   background-color: #f8f9fa;
   font-weight: 600;
   color: #495057;
+}
+
+.fail-table th:first-child,
+.fail-table td:first-child {
+  width: 13%;
+}
+
+.fail-table th:last-child,
+.fail-table td:last-child {
+  width: 87%;
 }
 
 .title {

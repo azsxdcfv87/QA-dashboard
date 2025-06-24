@@ -12,8 +12,8 @@ function App() {
       <div className="App-content">
         <OverviewTable />
         <FeatureTable />
-        <UploadTable />
         <MixpanelTable />
+        <UploadTable />
         <FailTable />
       </div>
     </div>

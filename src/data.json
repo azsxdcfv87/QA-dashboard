@@ -32,8 +32,8 @@
     "totalProcessTime": "13.6 秒"
   },
   "mixpanel": [
-    { "event": "v2.view.opened", "count": 13534 },
-    { "event": "v2.user.clicked", "count": 14120 }
+    { "event": "v2.view.opened", "total": 15000, "success": 15000 },
+    { "event": "v2.user.clicked", "total": 16000, "success": 14120 }
   ],
   "failedTests": [
     {
